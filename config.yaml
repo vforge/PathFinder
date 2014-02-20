@@ -1,0 +1,21 @@
+#Database
+database:
+  host: localhost
+  user: root
+  password:
+  DB: PathFinder
+
+format: article_from;article_to;id_to;count;last_update
+
+#Adapter
+adapter:
+  name: Scribe
+  config:
+    -tail: 100000
+    -grep: x=starwars&
+    file: log/*
+    threads: 2
+
+#Server
+port: 2000
+CORS: true

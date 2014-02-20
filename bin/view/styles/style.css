@@ -1,0 +1,109 @@
+.path-result li {
+    cursor: pointer;
+}
+.path-result li:nth-of-type(n-5):after {
+    content: ' -> ';
+    display: inline-block;
+    margin: 5px;
+}
+
+.link {
+    opacity: .4;
+
+    marker-end: url(#end-arrow);
+}
+
+.selectedPath {
+    opacity: 1;
+
+    stroke-width: 3px;
+
+    stroke-dasharray: 5,2;
+}
+
+.page {
+    cursor: move;
+    fill: #000;
+    stroke: #ccc;
+    stroke-width: .1px;
+
+    text-anchor: start;
+    font-size: 10px;
+    font-weight: 600;
+
+    transition: font-size .5s;
+
+    pointer-events: all;
+}
+
+.page.active {
+    fill: green;
+}
+
+.page:hover{
+    font-size: 25px;
+}
+
+.page.fixed {
+    fill: #99173C;
+    font-size: 15px;
+}
+
+.page:first-of-type {
+    fill: #6b102a;
+
+    text-transform: uppercase;
+
+    font-size: 2em;
+}
+
+.circle {
+    stroke-width: 1.5px;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+svg {
+    background: #FFFEEE;
+    border: 1px solid;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    box-sizing: border-box;
+
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+    display: block;
+}
+
+text {
+    text-anchor: middle;
+    font: 12px sans-serif;
+}
+
+#perma-link{
+    margin: 5px;
+}

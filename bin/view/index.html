@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>POMIAR I WIZUALIZACJA ŚCIEŻEK PRZEGLĄDANIA DOKUMENTÓW HIPERTEKSTOWYCH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles/bootstrap.min.css">
+<link rel="stylesheet" href="styles/bootstrap-responsive.min.css">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<div class="navbar ">
+    <div class="navbar-inner">
+        <a class="brand" href="#">PathFinder</a>
+        <ul class="nav">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#paths">Paths</a></li>
+            <li><a href="#most-visited">Most Visited</a></li>
+            <li><a href="#graph">Graph</a></li>
+        </ul>
+        <form class="navbar-form pull-left">
+            <input type="text" class="input-find-site search-query" data-provide="typeahead" autocomplete="off" value="wowwiki" placeholder="Choose site...">
+        </form>
+        <p class="navbar-text pull-right">
+            By <a href="mailto:bukaj.kelo@gmail.com">Jakub Olek</a>
+        </p>
+        <p class="navbar-text">
+            <a id=perma-link href="">Perma Link</a>
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="tab-content">
+        <div class="tab-pane active" id="home">
+            <div class="hero-unit">
+                <h1>PathFinder</h1>
+                <p>Let's you find what others found already!</p>
+                <p>
+                    <a class="btn btn-primary btn-large">
+                        It's Free!
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="tab-pane" id="paths">
+            <div class="page-header">
+                <h1>Paths <small>Find Paths</small></h1>
+            </div>
+
+            <label for=input-find-page>Page</label>
+            <input id=input-find-page type="text" class="input-page input-find-page" data-provide="typeahead" autocomplete="off">
+
+            <ul class="path-result inline"></ul>
+        </div>
+        <div class="tab-pane" id="most-visited">
+            <div class="page-header">
+                <h1>Most Visited <small>Get Most visted pages for a given page</small></h1>
+            </div>
+
+            <label for=input-most-page>Page</label>
+            <input id=input-most-page type="text" class="input-page input-most-page" data-provide="typeahead" autocomplete="off">
+
+            <table class='most-visited-result table table-striped table-condensed'>
+            </table>
+        </div>
+        <div class="tab-pane" id="graph">
+            <div class="page-header">
+                <h1>Graph <small>See graph for given page</small></h1>
+            </div>
+            <label for=input-graph>Page</label>
+            <input id=input-graph type="text" class="input-page input-graph" data-provide="typeahead" autocomplete="off" value="Path_of_Uther">
+        </div>
+    </div>
+</div>
+
+<script src="scripts/jquery-2.0.3.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/d3.min.js"></script>
+<script src="scripts/mustache.js"></script>
+<script src="scripts/script.js"></script>
+<script src="scripts/getpath.js"></script>
+<script src="scripts/getmostvisited.js"></script>
+<script src="scripts/graph.js"></script>
+</body>
+</html>

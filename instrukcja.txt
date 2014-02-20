@@ -1,0 +1,10 @@
+1. Sprawdź czy plik konfiguracyjny odpowiada twojej konfiguracji
+2. Uruchom serwer mysql i jeśli nie istnieje stwórz bazę danych PathFinder
+3. Przetwórz pliki uruchom ./pathfinder.rb -m etl -c config.yaml
+4. Uruchom Proces walidacji i naprawy danych ./pathfinder.rb -m fix -c config.yaml -s <nazwa serwisu> (np.: wowwiki)
+5. Uruchom serwer ./pathfinder.rb -m server -c config.yaml
+6. Otwórz stronę localhost:<port>
+7. W górnym pasku wybierz stronę dla której generowane mają być grafy
+8. W celu generowania ścieżek odwiedź stronę Paths
+9 .W celu generowania najczęściej wybieranych stron odwiedź stronę Most Visited
+10.W celu generowania grafów przejść odwiedź stronę Graph
